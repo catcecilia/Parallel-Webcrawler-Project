@@ -23,9 +23,11 @@ public final class ConfigurationLoader {
    *
    * @return the loaded {@link CrawlerConfiguration}.
    */
-  public CrawlerConfiguration load() {
+  public CrawlerConfiguration load() throws IOException{
     // TODO: Fill in this method.
 
+    //read JSon string from file path that's already provided to the ConfigurationLoader construct
+    //pass string to read(reader reader) and return CrawlerConfiguration
     return new CrawlerConfiguration.Builder().build();
   }
 
@@ -40,6 +42,8 @@ public final class ConfigurationLoader {
     Objects.requireNonNull(reader);
     // TODO: Fill in this method
 
-    return new CrawlerConfiguration.Builder().build();
+    ObjectMapper objectMapper = new ObjectMapper();
+
+    return objectMapper.readValue(reader,CrawlerConfiguration.Builder()).build();
   }
 }
