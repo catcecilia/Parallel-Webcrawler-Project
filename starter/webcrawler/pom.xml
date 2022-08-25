@@ -90,7 +90,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        com.udacity.webcrawler.main.WebCrawlerMain
+                                        com.udacity.webcrawler.parser.main.WebCrawlerMain
                                     </mainClass>
                                 </manifest>
                             </archive>
