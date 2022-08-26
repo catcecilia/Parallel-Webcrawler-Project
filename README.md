@@ -244,9 +244,7 @@ mvn package -Dmaven.test.skip=true
 Finally, run the legacy crawler using the sample configuration file included with the project:
 
 ```
-java -classpath target/udacity-webcrawler-1.0.jar \
-    com.udacity.webcrawler.main.WebCrawlerMain \
-    src/main/config/sample_config_sequential.json
+java -classpath target/udacity-webcrawler-1.0.jar com.udacity.webcrawler.main.WebCrawlerMain src/main/config/sample_config_sequential.json
 ```
 
 Was the JSON result printed to the terminal?
