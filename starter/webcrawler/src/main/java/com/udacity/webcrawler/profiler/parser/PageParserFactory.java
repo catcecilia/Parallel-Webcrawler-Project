@@ -1,4 +1,4 @@
-package com.udacity.webcrawler.parser;
+package com.udacity.webcrawler.profiler.parser;
 
 /**
  * A factory interface that supplies instances of {@link PageParser} that have common parameters

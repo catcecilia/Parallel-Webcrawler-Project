@@ -1,11 +1,11 @@
-package com.udacity.webcrawler.parser;
+package com.udacity.webcrawler.profiler.parser;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * A binding annotation for the list of ignored word patterns.
+ * A binding annotation for the parsing deadline.
  *
  * <p>This annotation has package-private visibility, which means it is not usable outside the
  * {@code com.udacity.webcrawler.parser} package, and it's only used so that the Guice module in
@@ -13,5 +13,5 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
-@interface IgnoredWords {
+@interface ParseDeadline {
 }

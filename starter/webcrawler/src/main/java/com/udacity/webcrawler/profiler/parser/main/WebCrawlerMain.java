@@ -1,4 +1,4 @@
-package com.udacity.webcrawler.parser.main;
+package com.udacity.webcrawler.profiler.parser.main;
 
 import com.google.inject.Guice;
 import com.udacity.webcrawler.WebCrawler;
@@ -11,7 +11,6 @@ import com.udacity.webcrawler.profiler.Profiler;
 import com.udacity.webcrawler.profiler.ProfilerModule;
 
 import javax.inject.Inject;
-import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.file.Path;

@@ -1,8 +1,8 @@
 package com.udacity.webcrawler;
 
 import com.udacity.webcrawler.json.CrawlResult;
-import com.udacity.webcrawler.parser.PageParser;
-import com.udacity.webcrawler.parser.PageParserFactory;
+import com.udacity.webcrawler.profiler.parser.PageParser;
+import com.udacity.webcrawler.profiler.parser.PageParserFactory;
 
 import javax.inject.Inject;
 import java.time.Clock;
