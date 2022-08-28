@@ -143,7 +143,7 @@ public final class CrawlerConfiguration {
   /**
    * The number of popular words the crawler should record in its output.
    *
-   * <p>See {@link com.udacity.webcrawler.json.CrawlResult#getWordCounts()} for more information.
+   * <p>See {@link CrawlResult#getWordCounts()} for more information.
    */
   public int getPopularWordCount() {
     return popularWordCount;
@@ -168,7 +168,7 @@ public final class CrawlerConfiguration {
    *
    * <p>If the path is empty, the data will be written to standard output.
    *
-   * <p>See {@link com.udacity.webcrawler.json.CrawlResult}.
+   * <p>See {@link CrawlResult}.
    */
   public String getResultPath() {
     return resultPath;
@@ -223,7 +223,7 @@ public final class CrawlerConfiguration {
      *
      * <p>Does nothing if the same pattern has already been added. See {@link #getIgnoredWords()}.
      *
-     * <p>See {@link com.udacity.webcrawler.json.CrawlResult#getWordCounts()} for more information
+     * <p>See {@link CrawlResult#getWordCounts()} for more information
      * about the popular word computation.
      *
      * @param patterns one or more regular expressions that define a valid {@link Pattern}.

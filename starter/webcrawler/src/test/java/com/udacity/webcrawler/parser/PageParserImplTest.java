@@ -1,4 +1,4 @@
-package com.udacity.webcrawler.profiler.parser;
+package com.udacity.webcrawler.parser;
 
 import org.junit.jupiter.api.Test;
 

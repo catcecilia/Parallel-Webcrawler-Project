@@ -1,4 +1,4 @@
-package com.udacity.webcrawler.profiler.parser.main;
+package com.udacity.webcrawler.main;
 
 import com.google.inject.Guice;
 import com.udacity.webcrawler.WebCrawler;

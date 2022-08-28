@@ -6,7 +6,7 @@ import com.google.inject.Provides;
 import com.google.inject.ProvisionException;
 import com.google.inject.multibindings.Multibinder;
 import com.udacity.webcrawler.json.CrawlerConfiguration;
-import com.udacity.webcrawler.profiler.parser.ParserModule;
+import com.udacity.webcrawler.parser.ParserModule;
 import com.udacity.webcrawler.profiler.Profiler;
 
 import javax.inject.Qualifier;
