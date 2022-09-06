@@ -12,6 +12,8 @@ Q1. Run the web crawler using the configurations located at src/main/config/writ
     Why did the parser take more time when run with ParallelWebCrawler?
     ANSWER: Parser in ParallelWebCrawler takes more time because of multi-threading. When each individual thread is started,
     it can be stopped, resumed, and its priority can change depending on how many threads or going (ie if it's at max), and so on.
+    To be explicit,  profiler measured the total time spent in the parse method across all threads.
+    When run with the ParallelWebCrawler, the parse method ran more times, so profileData.txt shows the total parse() time to be greater.
 
 Q2. Your manager ran your crawler on her old personal computer, using the configurations from Q1, and she notices that
     the sequential crawler actually outperforms the parallel crawler. She would like to know why.
@@ -27,9 +29,9 @@ Q2. Your manager ran your crawler on her old personal computer, using the config
 Q3. Analyze your method profiler through the lens of Aspect Oriented Programming, by answering the following questions:
 
     (a) What cross-cutting concern is being addressed by the com.udacity.webcrawler.profiler.Profiler class?
-    ANSWER:  exception handling (IllegalArgumentException, IOException)
+    ANSWER:  Performance measure
     (b) What are the join points of the Profiler in the web crawler program?
-    ANSWER:methods writeData() and wrap()
+    ANSWER: Method invocations
 
 Q4. Identify three (3) different design patterns used in this project, and explain which interfaces, classes, and/or
     libraries use or implement those design patterns.
