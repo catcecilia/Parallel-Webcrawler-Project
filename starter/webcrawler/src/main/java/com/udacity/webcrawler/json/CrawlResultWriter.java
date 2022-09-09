@@ -57,7 +57,7 @@ public final class CrawlResultWriter {
     try{
       objectMapper.writeValue(writer, result);
     } catch (Exception ex) {
-      // do nothing
+      ex.printStackTrace(); //preventing resource leak
     }
   }
 }

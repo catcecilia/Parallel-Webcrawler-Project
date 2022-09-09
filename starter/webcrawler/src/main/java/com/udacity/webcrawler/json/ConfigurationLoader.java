@@ -35,10 +35,11 @@ public final class ConfigurationLoader {
     Reader reader = null;
     try{
       reader = Files.newBufferedReader(path);
+      return read(reader);
     } catch (IOException e) {
-      //do nothing
+      e.printStackTrace(); //preventing resource leak
+      return null;
     }
-    return read(reader);
   }
 
   /**
