@@ -28,17 +28,12 @@ public final class ConfigurationLoader {
    *
    * @return the loaded {@link CrawlerConfiguration}.
    */
-  public CrawlerConfiguration load() {
+  public CrawlerConfiguration load() throws IOException {
     // TODO: Fill in this method.
     //read JSon string from file path that's already provided to the ConfigurationLoader construct
     //pass string to read(Reader reader) and return CrawlerConfiguration
-    Reader reader = null;
-    try{
-      reader = Files.newBufferedReader(path);
+    try (Reader reader = Files.newBufferedReader(path)){
       return read(reader);
-    } catch (IOException e) {
-      e.printStackTrace(); //preventing resource leak
-      return null;
     }
   }
 
@@ -54,7 +49,7 @@ public final class ConfigurationLoader {
     try {
       return objectMapper.readValue(reader, CrawlerConfiguration.class);
     } catch(IOException e){
-      //do nothing
+      e.printStackTrace();
     }
     return null;
   }
